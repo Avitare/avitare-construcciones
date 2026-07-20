@@ -1,0 +1,19 @@
+Coloca aqui una foto por cada servicio (formatos: jpg, jpeg, png o webp).
+El nombre del archivo debe coincidir EXACTAMENTE con el slug del servicio
+(sin espacios, todo en minusculas):
+
+  independizacion-de-inmuebles.jpg
+  asesorias-personalizadas.jpg
+  saneamiento-fisico-legal.jpg
+  subdivisiones-y-particiones.jpg
+  declaratoria-de-fabrica.jpg
+  regularizacion-de-edificaciones.jpg
+  inscripcion-de-predios.jpg
+
+No es necesario modificar ningun archivo de codigo ni reiniciar el
+servidor: basta con agregar la imagen con el nombre correcto en esta
+carpeta y aparecera automaticamente en la tarjeta de ese servicio
+(en la pagina de Inicio y en la pagina de Servicios).
+
+Mientras un servicio no tenga foto, se muestra un fondo azul con un
+icono representativo en su lugar.

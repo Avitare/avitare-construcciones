@@ -1,0 +1,10 @@
+Coloca aqui UNA foto para el fondo del hero de la pagina de inicio
+(formatos: jpg, jpeg, png o webp). Ideal: una foto de obra/construccion
+en formato horizontal (ancha), de buena resolucion (1600px+ de ancho).
+
+Se usa automaticamente como fondo apenas la agregues, sin tocar
+codigo. Si hay mas de una imagen, se usa la primera en orden
+alfabetico, asi que basta con dejar una sola foto aqui.
+
+Mientras no haya ninguna foto, se muestra un fondo azul oscuro liso
+en su lugar.

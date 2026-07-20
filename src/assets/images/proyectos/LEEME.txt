@@ -1,0 +1,8 @@
+Coloca aqui las fotos de proyectos (formatos: jpg, jpeg, png o webp).
+
+Apareceran automaticamente en la seccion "Proyectos realizados" de la
+pagina de inicio, en el orden alfabetico del nombre de archivo.
+Ejemplo: 01-fachada.jpg, 02-interior.jpg, 03-acabados.jpg
+
+No es necesario modificar ningun archivo de codigo ni reiniciar el
+servidor: basta con agregar o quitar imagenes en esta carpeta.
