@@ -14,6 +14,8 @@ export const SERVICES = [
     title: "Independización de Inmuebles",
     summary:
       "Convertimos un solo inmueble en unidades independientes, permitiendo que cada propiedad cuente con su propia partida registral.",
+    details:
+      "Cuando un predio o edificación pertenece a varios copropietarios, o cuando quieres vender, heredar o financiar una parte específica de tu propiedad, es necesario que cada unidad tenga su propia identidad legal ante Registros Públicos. Nos encargamos de todo el proceso técnico y documentario: desde la elaboración de planos y memoria descriptiva hasta la presentación y seguimiento del expediente, para que cada unidad quede debidamente independizada y pueda transferirse o hipotecarse de forma individual.",
     benefits: [
       "Facilita la venta de una parte del inmueble.",
       "Incrementa el valor de la propiedad.",
@@ -26,6 +28,8 @@ export const SERVICES = [
     title: "Asesorías Personalizadas",
     summary:
       "Cada proyecto es diferente. Analizamos tu caso y te brindamos soluciones adaptadas a tus necesidades.",
+    details:
+      "Antes de iniciar cualquier trámite conviene tener claridad sobre el camino correcto a seguir: qué procedimiento aplica, qué documentos se necesitan y cuánto tiempo puede tomar. En esta primera evaluación revisamos la situación específica de tu propiedad o proyecto, identificamos posibles observaciones o riesgos, y te explicamos con lenguaje sencillo las opciones disponibles para que tomes la mejor decisión con respaldo profesional.",
     benefits: [
       "Te ayudamos a tomar decisiones con respaldo profesional antes de iniciar cualquier trámite o proyecto.",
     ],
@@ -35,6 +39,8 @@ export const SERVICES = [
     title: "Saneamiento Físico Legal",
     summary:
       "Regularizamos la situación física y legal de tu propiedad para evitar futuros inconvenientes.",
+    details:
+      "Es común que una propiedad presente diferencias entre lo construido físicamente y lo que figura registrado: linderos, áreas, propietarios o cargas desactualizadas. Este desorden puede complicar una venta, herencia o trámite bancario. Evaluamos la situación registral y física de tu inmueble, identificamos las inconsistencias y gestionamos su corrección ante las entidades correspondientes hasta dejar tu propiedad completamente en regla.",
     benefits: [
       "Corrección de información registral.",
       "Actualización de documentación.",
@@ -47,6 +53,8 @@ export const SERVICES = [
     title: "Subdivisiones y Particiones",
     summary:
       "Organizamos y distribuimos terrenos o propiedades de manera técnica y legal.",
+    details:
+      "Ya sea que quieras dividir un terreno en lotes para vender por separado, repartir un bien heredado entre varios beneficiarios, o planificar un proyecto inmobiliario por etapas, el proceso requiere planos técnicos aprobados y una correcta formalización legal. Te acompañamos en el diseño técnico de la división y en la tramitación ante la municipalidad y Registros Públicos, para que cada lote o unidad resultante quede legalmente independizado.",
     benefits: ["Herencias.", "Venta por lotes.", "Desarrollo inmobiliario.", "División patrimonial."],
     benefitsLabel: "Ideal para:",
   },
@@ -55,6 +63,8 @@ export const SERVICES = [
     title: "Declaratoria de Fábrica",
     summary:
       "Formalizamos edificaciones que aún no se encuentran inscritas en los Registros Públicos.",
+    details:
+      "Si construiste, ampliaste o remodelaste una vivienda o local y esa construcción aún no figura inscrita, tu propiedad no refleja su valor real ni cuenta con el respaldo legal necesario. Elaboramos la documentación técnica requerida (planos, memoria descriptiva, valorización) y gestionamos el trámite municipal y registral para que tu edificación quede formalmente reconocida ante la ley.",
     benefits: [
       "Acreditar oficialmente tu construcción.",
       "Facilitar ventas y transferencias.",
@@ -68,6 +78,8 @@ export const SERVICES = [
     title: "Regularización de Edificaciones",
     summary:
       "Si realizaste ampliaciones o construcciones sin registrar, nosotros te ayudamos a poner toda tu documentación en regla.",
+    details:
+      "Muchas construcciones se levantan por etapas, sin licencia previa o con modificaciones respecto al proyecto original aprobado. Esto puede generar observaciones al momento de vender, heredar o acceder a un crédito. Evaluamos tu caso particular y gestionamos la regularización ante la municipalidad y Registros Públicos, cubriendo desde viviendas unifamiliares hasta edificios y locales comerciales.",
     benefits: ["Viviendas.", "Edificios.", "Locales comerciales.", "Ampliaciones.", "Remodelaciones."],
     benefitsLabel: "Regularizamos:",
   },
@@ -76,7 +88,27 @@ export const SERVICES = [
     title: "Inscripción de Predios",
     summary:
       "Gestionamos la inscripción de tu propiedad en los Registros Públicos para brindarte seguridad jurídica y respaldo legal.",
+    details:
+      "Un predio que no está inscrito ante Registros Públicos no cuenta con la protección legal que te acredita como propietario frente a terceros, lo que puede generar conflictos o dificultar su venta o herencia. Revisamos la documentación disponible de tu terreno o propiedad y gestionamos todo el procedimiento de primera inscripción, dándole seguimiento hasta obtener tu partida registral.",
     benefits: ["Nos encargamos del seguimiento del trámite hasta su culminación."],
+  },
+];
+
+export const TEAM = [
+  {
+    slug: "gerente-general",
+    name: "Miguel Olenko Perez Yuyez",
+    role: "Gerente General",
+  },
+  {
+    slug: "arquitecta",
+    name: "Paulina Garcia Gonzales",
+    role: "Arquitecta",
+  },
+  {
+    slug: "asistente-legal",
+    name: "Paula Girón Huanilo",
+    role: "Asistente Legal",
   },
 ];
 
@@ -109,12 +141,37 @@ export const PROCESS_STEPS = [
 ];
 
 export const AUDIENCE = [
-  "Propietarios de viviendas.",
-  "Dueños de terrenos.",
-  "Empresas.",
-  "Constructoras.",
-  "Inversionistas inmobiliarios.",
-  "Familias que desean regularizar su patrimonio.",
+  { label: "Propietarios de viviendas", icon: "house" },
+  { label: "Dueños de terrenos", icon: "land" },
+  { label: "Empresas", icon: "company" },
+  { label: "Constructoras", icon: "crane" },
+  { label: "Inversionistas inmobiliarios", icon: "invest" },
+  { label: "Familias que desean regularizar su patrimonio", icon: "family" },
+];
+
+// TODO: reemplazar con testimonios reales de clientes (nombre, servicio y comentario).
+export const TESTIMONIALS = [
+  {
+    name: "Lorem Ipsum",
+    service: "Independización de Inmuebles",
+    quote:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    rating: 5,
+  },
+  {
+    name: "Lorem Ipsum",
+    service: "Saneamiento Físico Legal",
+    quote:
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    rating: 5,
+  },
+  {
+    name: "Lorem Ipsum",
+    service: "Declaratoria de Fábrica",
+    quote:
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    rating: 5,
+  },
 ];
 
 export const FAQS = [
@@ -124,13 +181,9 @@ export const FAQS = [
       "Es el proceso mediante el cual se regulariza la situación técnica y legal de un inmueble para garantizar que toda su documentación esté correctamente inscrita.",
   },
   {
-    question: "¿Qué necesito para independizar mi inmueble?",
+    question: "¿Qué documentos necesito para empezar?",
     answer:
-      "Dependerá de cada caso. Nuestro equipo evaluará la documentación y te indicará los requisitos específicos.",
-  },
-  {
-    question: "¿Puedo regularizar una construcción antigua?",
-    answer: "Sí. Analizamos cada caso para determinar el procedimiento correspondiente.",
+      "Generalmente partimos de tu título de propiedad o partida registral, documento de identidad y planos si los tienes. Si no cuentas con todos, no hay problema: en la asesoría te indicamos cómo obtenerlos o cómo continuar.",
   },
   {
     question: "¿Cuánto demora un trámite?",
@@ -138,49 +191,14 @@ export const FAQS = [
       "El tiempo varía según el tipo de servicio y las entidades involucradas. Durante la asesoría te brindaremos un plazo estimado.",
   },
   {
-    question: "¿Qué es la declaratoria de fábrica y cuándo la necesito?",
-    answer:
-      "Es el trámite que formaliza ante Registros Públicos una edificación construida que aún no figura inscrita. La necesitas si construiste, ampliaste o remodelaste tu inmueble y quieres que esas obras consten oficialmente en tu partida registral.",
-  },
-  {
-    question: "¿Cuál es la diferencia entre subdivisión, independización y partición?",
-    answer:
-      "La subdivisión divide un terreno en lotes independientes; la independización separa unidades dentro de una edificación, como departamentos; y la partición distribuye un bien entre varios propietarios, por ejemplo en una herencia. Durante la asesoría te orientamos sobre cuál aplica a tu caso.",
-  },
-  {
-    question: "¿Por qué es importante inscribir mi predio en Registros Públicos?",
-    answer:
-      "La inscripción te da seguridad jurídica: acredita quién es el propietario ante terceros, facilita la venta o herencia del bien y evita conflictos futuros por falta de documentación registral.",
-  },
-  {
-    question: "¿En qué consisten las asesorías personalizadas?",
-    answer:
-      "Evaluamos la situación específica de tu propiedad o proyecto antes de iniciar cualquier trámite, para indicarte el procedimiento más adecuado, los documentos que necesitarás y los pasos a seguir.",
-  },
-  {
     question: "¿Cuánto cuesta un trámite?",
     answer:
       "El costo depende del tipo de servicio, la complejidad del caso y las entidades involucradas. La primera asesoría es gratuita y en ella te brindamos una cotización clara antes de iniciar cualquier gestión.",
   },
   {
-    question: "¿Qué documentos necesito para empezar?",
-    answer:
-      "Generalmente partimos de tu título de propiedad o partida registral, documento de identidad y planos si los tienes. Si no cuentas con todos, no hay problema: en la asesoría te indicamos cómo obtenerlos o cómo continuar.",
-  },
-  {
     question: "¿Atienden solo en Chiclayo o también en otras zonas?",
     answer:
       "Estamos ubicados en Chiclayo y atendemos principalmente casos en la región Lambayeque. Escríbenos por WhatsApp contándonos dónde se ubica tu propiedad y te confirmamos si podemos ayudarte.",
-  },
-  {
-    question: "¿Qué pasa si mi trámite tiene observaciones en Registros Públicos?",
-    answer:
-      "Te acompañamos durante todo el proceso, incluyendo la subsanación de observaciones, hasta lograr la inscripción definitiva.",
-  },
-  {
-    question: "¿Puedo tramitar si no tengo planos o mi construcción no cuenta con licencia?",
-    answer:
-      "Sí. Muchos casos de regularización parten justamente de construcciones sin licencia o sin planos. Evaluamos tu situación y te indicamos la vía correspondiente para formalizarla.",
   },
 ];
 

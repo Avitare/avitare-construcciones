@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { SERVICE_ICONS, DefaultServiceIcon } from "./ServiceIcons";
 
@@ -15,10 +16,11 @@ const photosBySlug = Object.keys(photoModules).reduce((map, path) => {
 const ServiceCard = ({ service, index, style }) => {
   const photo = photosBySlug[service.slug];
   const Icon = SERVICE_ICONS[service.slug] || DefaultServiceIcon;
+  const [showBenefits, setShowBenefits] = useState(false);
 
   return (
     <div className="service-card card reveal" style={style}>
-      <div className="service-card-media">
+      <Link to={`/servicios/${service.slug}`} className="service-card-media">
         {photo ? (
           <img src={photo} alt={service.title} loading="lazy" />
         ) : (
@@ -27,22 +29,39 @@ const ServiceCard = ({ service, index, style }) => {
           </span>
         )}
         <span className="badge">{String(index + 1).padStart(2, "0")}</span>
-      </div>
+      </Link>
       <div className="service-card-body">
-        <h3>{service.title}</h3>
+        <h3>
+          <Link to={`/servicios/${service.slug}`}>{service.title}</Link>
+        </h3>
         <p>{service.summary}</p>
         {service.benefits && (
           <>
-            <p className="benefits-label">{service.benefitsLabel || "Beneficios"}</p>
-            <ul>
-              {service.benefits.map((b) => (
-                <li key={b}>{b}</li>
-              ))}
-            </ul>
+            <button
+              type="button"
+              className="service-card-toggle"
+              onClick={() => setShowBenefits((v) => !v)}
+              aria-expanded={showBenefits}
+            >
+              {showBenefits ? "Ocultar beneficios" : "Ver beneficios"}
+              <span className={`icon ${showBenefits ? "is-open" : ""}`} aria-hidden="true">
+                +
+              </span>
+            </button>
+            {showBenefits && (
+              <>
+                <p className="benefits-label">{service.benefitsLabel || "Beneficios"}</p>
+                <ul>
+                  {service.benefits.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+              </>
+            )}
           </>
         )}
-        <Link to={`/contacto?servicio=${encodeURIComponent(service.title)}`} className="service-card-cta">
-          Solicitar este servicio
+        <Link to={`/servicios/${service.slug}`} className="service-card-cta">
+          Ver más
           <span aria-hidden="true">→</span>
         </Link>
       </div>

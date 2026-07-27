@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://avitareconstrucciones.grupoavitare.com/sitemap.xml

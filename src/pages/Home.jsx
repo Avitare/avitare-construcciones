@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import Seo from "../components/Seo";
 import ProjectGallery from "../components/ProjectGallery";
-import ServiceCard from "../components/ServiceCard";
+import Testimonials from "../components/Testimonials";
+import ServiceCardCompact from "../components/ServiceCardCompact";
 import { SERVICES, WHY_US, whatsappLink } from "../siteData";
 
 const heroModules = import.meta.glob("../assets/images/hero/*.{png,jpg,jpeg,webp}", {
@@ -87,13 +88,13 @@ const Home = () => (
       />
       <div className="hero-overlay" aria-hidden="true" />
       <div className="container">
-        <div className="hero-content reveal">
-          <h1>
+        <div className="hero-content">
+          <h1 className="hero-anim hero-anim-1">
             Construye y protege
             <br />
             <span className="hero-highlight">tu inversión</span>
           </h1>
-          <div className="hero-trust">
+          <div className="hero-trust hero-anim hero-anim-2">
             <span className="hero-trust-icon">
               <ShieldIcon />
             </span>
@@ -103,12 +104,12 @@ const Home = () => (
               el respaldo que necesitas
             </span>
           </div>
-          <p className="lead">
+          <p className="lead hero-anim hero-anim-3">
             Soluciones técnicas y legales para que tu propiedad esté{" "}
             <span className="hero-accent-text">segura, en regla</span> y con{" "}
             <span className="hero-accent-text">respaldo profesional</span>.
           </p>
-          <div className="cta-row">
+          <div className="cta-row hero-anim hero-anim-4">
             <Link to="/contacto" className="btn btn-primary">
               <CalendarIcon />
               Solicitar asesoría
@@ -122,7 +123,38 @@ const Home = () => (
           </div>
         </div>
       </div>
+      <div className="hero-scroll-cue" aria-hidden="true">
+        <span />
+      </div>
     </section>
+
+    <section className="section">
+      <div className="container">
+        <div className="section-header reveal">
+          <p className="eyebrow">Lo que hacemos</p>
+          <h2>Nuestros Servicios</h2>
+          <p>Soluciones integrales para cada etapa de la vida legal de tu propiedad.</p>
+        </div>
+        <div className="services-grid-compact">
+          {SERVICES.slice(0, 3).map((service, i) => (
+            <ServiceCardCompact
+              key={service.slug}
+              service={service}
+              style={{ transitionDelay: `${i * 70}ms` }}
+            />
+          ))}
+        </div>
+        <div className="cta-row" style={{ justifyContent: "center", marginTop: 8 }}>
+          <Link to="/servicios" className="btn btn-dark-outline">
+            Ver todos los servicios
+          </Link>
+        </div>
+      </div>
+    </section>
+
+    <Testimonials />
+
+    <ProjectGallery />
 
     <section className="why-band">
       <div className="container">
@@ -154,41 +186,16 @@ const Home = () => (
       </div>
     </section>
 
-    <section className="section">
-      <div className="container">
-        <div className="section-header reveal">
-          <p className="eyebrow">Lo que hacemos</p>
-          <h2>Nuestros Servicios</h2>
-          <p>Soluciones integrales para cada etapa de la vida legal de tu propiedad.</p>
-        </div>
-        <div className="services-grid">
-          {SERVICES.slice(0, 6).map((service, i) => (
-            <ServiceCard
-              key={service.slug}
-              service={service}
-              index={i}
-              style={{ transitionDelay: `${i * 70}ms` }}
-            />
-          ))}
-        </div>
-        <div className="cta-row" style={{ justifyContent: "center", marginTop: 40 }}>
-          <Link to="/servicios" className="btn btn-dark-outline">
-            Ver todos los servicios
-          </Link>
-        </div>
-      </div>
-    </section>
-
-    <ProjectGallery />
-
     <section className="cta-band">
-      <div className="container reveal">
-        <h2>¿Necesitas asesoría técnica o legal para tu propiedad?</h2>
-        <p>Nuestro equipo está listo para ayudarte a proteger tu patrimonio con total respaldo profesional.</p>
-        <div className="cta-row">
-          <Link to="/contacto" className="btn btn-primary">
-            Solicitar Asesoría Gratuita
-          </Link>
+      <div className="container">
+        <div className="cta-band-panel reveal">
+          <h2>¿Necesitas asesoría técnica o legal para tu propiedad?</h2>
+          <p>Nuestro equipo está listo para ayudarte a proteger tu patrimonio con total respaldo profesional.</p>
+          <div className="cta-row">
+            <Link to="/contacto" className="btn btn-primary">
+              Solicitar Asesoría Gratuita
+            </Link>
+          </div>
         </div>
       </div>
     </section>

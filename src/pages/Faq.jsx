@@ -48,13 +48,15 @@ const Faq = () => {
       </section>
 
       <section className="cta-band">
-        <div className="container reveal">
-          <h2>¿Tienes otra pregunta?</h2>
-          <p>Escríbenos y te responderemos a la brevedad.</p>
-          <div className="cta-row">
-            <Link to="/contacto" className="btn btn-primary">
-              Contáctanos
-            </Link>
+        <div className="container">
+          <div className="cta-band-panel reveal">
+            <h2>¿Tienes otra pregunta?</h2>
+            <p>Escríbenos y te responderemos a la brevedad.</p>
+            <div className="cta-row">
+              <Link to="/contacto" className="btn btn-primary">
+                Contáctanos
+              </Link>
+            </div>
           </div>
         </div>
       </section>

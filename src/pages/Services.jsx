@@ -58,12 +58,14 @@ const Services = () => (
 
     <section className="cta-band">
       <div className="container">
-        <h2>¿No sabes qué servicio necesitas?</h2>
-        <p>Cuéntanos tu caso y te orientamos sin costo sobre el mejor camino a seguir.</p>
-        <div className="cta-row">
-          <Link to="/contacto" className="btn btn-primary">
-            Solicitar Asesoría Gratuita
-          </Link>
+        <div className="cta-band-panel">
+          <h2>¿No sabes qué servicio necesitas?</h2>
+          <p>Cuéntanos tu caso y te orientamos sin costo sobre el mejor camino a seguir.</p>
+          <div className="cta-row">
+            <Link to="/contacto" className="btn btn-primary">
+              Solicitar Asesoría Gratuita
+            </Link>
+          </div>
         </div>
       </div>
     </section>

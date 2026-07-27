@@ -66,8 +66,8 @@ const Contact = () => {
             <div className="contact-detail">
               <span className="icon-circle">⌖</span>
               <div>
-                <strong>Ubicación</strong>
-                <span>Chiclayo, Perú</span>
+                <strong>Zona de cobertura</strong>
+                <span>Atendemos en Chiclayo y alrededores. Trabajamos sin local físico, coordinando todo de forma remota y con visitas cuando el trámite lo requiere.</span>
               </div>
             </div>
 
@@ -82,18 +82,6 @@ const Contact = () => {
             <a href={whatsappLink()} target="_blank" rel="noreferrer" className="btn btn-whatsapp" style={{ width: "100%", marginTop: 8 }}>
               Contáctanos por WhatsApp
             </a>
-
-            <div className="map-placeholder">
-              <iframe
-                title="Ubicación de Avitare Construcciones en Chiclayo"
-                src="https://www.google.com/maps?q=Chiclayo,Peru&output=embed"
-                width="100%"
-                height="220"
-                style={{ border: 0 }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
           </div>
 
           <div className="contact-form-card card">
